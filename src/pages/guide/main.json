@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "指南",
+  "usingComponents": {
+    "van-button": "/vant-weapp/dist/button/index"
+  }
+}

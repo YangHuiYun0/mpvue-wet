@@ -1,0 +1,38 @@
+/*
+ * createTime：2020/3/24
+ * author：fujie.wen
+ * description: 前端使用的api模块
+ */
+
+/** 保留两位小数 */
+function Fix2 (value) {
+  if (!value) return 0
+  value = Number(value)
+  let times = Math.pow(10, 2)
+  let des = value * times + 0.5
+  des = parseInt(des, 10) / times
+  return des.toFixed(2)
+}
+
+/**
+ * 数字分割
+ * 效果：12345 => '12,345'
+ */
+function goldDivide (value) {
+  if (value) {
+    return Number(value).toLocaleString()
+  }
+  return value
+}
+
+// 手机号掩码
+function phoneMask (value) {
+  if (value) {
+    return value.substring(0, 3) + '****' + value.substring(7, 11)
+  }
+  return value
+}
+
+module.exports.Fix2 = Fix2
+module.exports.goldDivide = goldDivide
+module.exports.phoneMask = phoneMask
